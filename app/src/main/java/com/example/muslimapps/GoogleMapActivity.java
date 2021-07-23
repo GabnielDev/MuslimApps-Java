@@ -33,54 +33,9 @@ public class GoogleMapActivity extends FragmentActivity implements OnMapReadyCal
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-//        mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
-//        mapFragment.getMapAsync(GoogleMapActivity.this);
-//        setupAutoCompleteFragment();
+        
     }
 
-//    private void setupAutoCompleteFragment() {
-//        PlaceAutocompleteFragment autocompleteFragment = (PlaceAutocompleteFragment)
-//                getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
-//        autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
-//            @Override
-//            public void onPlaceSelected(Place place) {
-//                sydney = place.getLatLng();
-//                String url = getUrl(sydney.latitude, sydney.longitude, "");
-//                Object[] DataTransfer = new Object[2];
-//                DataTransfer[0] = mMap;
-//                DataTransfer[1] = url;
-//                Log.d("onClick", url);
-//                GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
-//                getNearbyPlacesData.execute(DataTransfer);
-//            }
-//
-//            @Override
-//            public void onError(Status status) {
-//                Log.e("Error", status.getStatusMessage());
-//            }
-//        });
-////        PlaceAutocompleteFragment autocompleteFragment = (PlaceAutocompleteFragment)
-////                getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
-////        autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
-////            @Override
-////            public void onPlaceSelected(Place place) {
-////                sydney = place.getLatLng();
-////                String url = getUrl(sydney.latitude, sydney.longitude, "");
-////                Object[] DataTransfer = new Object[2];
-////                DataTransfer[0] = mMap;
-////                DataTransfer[1] = url;
-////                Log.d("onClick", url);
-////                GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
-////                getNearbyPlacesData.execute(DataTransfer);
-////            }
-////
-////            @Override
-////            public void onError(Status status) {
-////                Log.e("Error", status.getStatusMessage());
-////            }
-////        });
-//    }
 
     private String getUrl(double latitude, double longitude, String s) {
         StringBuilder googlePlacesUrl = new StringBuilder(getString(R.string.urlapi));
@@ -100,7 +55,7 @@ public class GoogleMapActivity extends FragmentActivity implements OnMapReadyCal
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 8.5f));
         mMap.addMarker(new MarkerOptions()
                 .position(sydney)
-                .title("www.kodetr.com")
+                .title("Lokasi saya")
                 .snippet("lokasi saya")
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
 
