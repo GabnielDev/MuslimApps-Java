@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Muslim Apps</string>
+    <string name="api_key_android">AIzaSyA_nvFln2iBQLoqXzQXf2yv7ZzFMz7dsSI</string>
+    <string name="api_key_web">AIzaSyCrTyVS_G7SsPDMtBewfVXfJdrsfQxWyT4</string>
+    <string name="urlapi">https://maps.googleapis.com/maps/api/place/nearbysearch/json?</string>
+    <string name="title_activity_google_map">Map</string>
+    <string name="title_activity_maps2">Map</string>
+</resources>
